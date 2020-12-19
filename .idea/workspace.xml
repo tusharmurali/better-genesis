@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e9068e3e-7f28-4a60-9475-0f3df78d03ff" name="Default Changelist" comment="Frontend services">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/better-genesis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/css/chunk-vendors.5ea8f67a.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/img/logo.3aa931c9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/img/name.31f98ad8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/js/app.114525f3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/js/app.114525f3.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/js/chunk-vendors.5eaf0520.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/js/chunk-vendors.5eaf0520.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/api/genesis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Assignments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Assignments.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CourseCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CourseCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Gradebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Gradebook.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/vue.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1kSVovmiOP13AD4P1gNfrR1hpfA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.19.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/assets" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\tusha\OneDrive\Desktop\better-genesis\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tusha\OneDrive\Desktop\better-genesis\client\src\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tusha\OneDrive\Desktop\better-genesis\client\src\assets" />
+      <recent name="C:\Users\tusha\OneDrive\Desktop\better-genesis\client\public" />
+      <recent name="C:\Users\tusha\OneDrive\Desktop\better-genesis\server\routes\api" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9068e3e-7f28-4a60-9475-0f3df78d03ff" name="Default Changelist" comment="" />
+      <created>1605694161219</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605694161219</updated>
+      <workItem from="1605694162716" duration="40439000" />
+      <workItem from="1605979789843" duration="34767000" />
+      <workItem from="1606595308166" duration="39413000" />
+      <workItem from="1606800786260" duration="199890000" />
+      <workItem from="1608145932052" duration="3507000" />
+      <workItem from="1608152800185" duration="4747000" />
+      <workItem from="1608259798844" duration="2078000" />
+      <workItem from="1608323866174" duration="36000" />
+      <workItem from="1608323947305" duration="2481000" />
+    </task>
+    <task id="LOCAL-00001" summary="Navigation guards">
+      <created>1605981000608</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605981000608</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Frontend services">
+      <created>1608054298245</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608054298245</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Navigation guards" />
+    <MESSAGE value="Frontend services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frontend services" />
+  </component>
+</project>
