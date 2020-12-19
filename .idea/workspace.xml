@@ -20,30 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9068e3e-7f28-4a60-9475-0f3df78d03ff" name="Default Changelist" comment="Frontend services">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/better-genesis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/css/chunk-vendors.5ea8f67a.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/img/logo.3aa931c9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/img/name.31f98ad8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/js/app.114525f3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/js/app.114525f3.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/js/chunk-vendors.5eaf0520.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/js/chunk-vendors.5eaf0520.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/api/genesis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client" beforeDir="false" afterPath="$PROJECT_DIR$/client" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Assignments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Assignments.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/CourseCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CourseCard.vue" afterDir="false" />
@@ -51,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/client/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/genesis.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/genesis.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +98,7 @@
       <workItem from="1608152800185" duration="4747000" />
       <workItem from="1608259798844" duration="2078000" />
       <workItem from="1608323866174" duration="36000" />
-      <workItem from="1608323947305" duration="2481000" />
+      <workItem from="1608323947305" duration="2537000" />
     </task>
     <task id="LOCAL-00001" summary="Navigation guards">
       <created>1605981000608</created>
