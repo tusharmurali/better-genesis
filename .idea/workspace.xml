@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9068e3e-7f28-4a60-9475-0f3df78d03ff" name="Default Changelist" comment="Frontend services">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client" beforeDir="false" afterPath="$PROJECT_DIR$/client" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Assignments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Assignments.vue" afterDir="false" />
@@ -105,7 +104,7 @@
       <workItem from="1608363127271" duration="599000" />
       <workItem from="1608527598471" duration="603000" />
       <workItem from="1609153851580" duration="4000" />
-      <workItem from="1609196371429" duration="5561000" />
+      <workItem from="1609196371429" duration="5609000" />
     </task>
     <task id="LOCAL-00001" summary="Navigation guards">
       <created>1605981000608</created>
