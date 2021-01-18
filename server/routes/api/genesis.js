@@ -4,7 +4,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const aes256 = require("aes256");
 
-const cipher = aes256.createCipher("Ankita's birthday");
+const cipher = aes256.createCipher("wow very secret");
 const router = express.Router();
 
 router.post("/login", async (req, res) => {
@@ -119,6 +119,7 @@ router.post("/assignments", async (req, res) => {
     );
 
     const $ = cheerio.load(response.data);
+    if ($("#fldStudent").length === 0) res.sendStatus(401);
     const assignments = $(".list > tbody > tr")
       .slice(1)
       .map(function (id) {
@@ -135,6 +136,7 @@ router.post("/assignments", async (req, res) => {
         } else if (children.length > 0) {
           [points, grade] = [grade, points];
         }
+        if (cells.length === 0) return;
         return {
           id,
           name: cells.eq(3).children().eq(0).text(),
@@ -148,8 +150,7 @@ router.post("/assignments", async (req, res) => {
       })
       .get();
 
-    if (assignments.length === 0) res.sendStatus(401);
-    else res.send([$("#fldCourse option:selected").text(), assignments]);
+    res.send([$("#fldCourse option:selected").text(), assignments]);
   } catch (error) {
     console.log(error);
   }

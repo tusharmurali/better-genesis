@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9068e3e-7f28-4a60-9475-0f3df78d03ff" name="Default Changelist" comment="Frontend services">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client" beforeDir="false" afterPath="$PROJECT_DIR$/client" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Assignments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Assignments.vue" afterDir="false" />
@@ -27,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/client/src/components/CourseCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CourseCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Gradebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Gradebook.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Information.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Information.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/vue.config.js" afterDir="false" />
@@ -46,7 +48,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -104,7 +106,8 @@
       <workItem from="1608363127271" duration="599000" />
       <workItem from="1608527598471" duration="603000" />
       <workItem from="1609153851580" duration="4000" />
-      <workItem from="1609196371429" duration="5609000" />
+      <workItem from="1609196371429" duration="6475000" />
+      <workItem from="1610939174874" duration="5112000" />
     </task>
     <task id="LOCAL-00001" summary="Navigation guards">
       <created>1605981000608</created>
