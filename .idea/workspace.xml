@@ -48,7 +48,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -107,7 +107,7 @@
       <workItem from="1608527598471" duration="603000" />
       <workItem from="1609153851580" duration="4000" />
       <workItem from="1609196371429" duration="6475000" />
-      <workItem from="1610939174874" duration="5112000" />
+      <workItem from="1610939174874" duration="5526000" />
     </task>
     <task id="LOCAL-00001" summary="Navigation guards">
       <created>1605981000608</created>
