@@ -3,8 +3,9 @@ const querystring = require("querystring");
 const axios = require("axios");
 const cheerio = require("cheerio");
 const aes256 = require("aes256");
+const https = require("https");
 
-const cipher = aes256.createCipher("Ankita's birthday");
+const cipher = aes256.createCipher("wow very secret");
 const router = express.Router();
 
 router.post("/login", async (req, res) => {
@@ -204,7 +205,12 @@ router.post("/weekly", async (req, res) => {
 
     const response = await axios.get(
       `https://parents.mtsd.k12.nj.us/genesis/parents?tab1=studentdata&tab2=gradebook&tab3=listassignments&studentid=${req.body.studentId}&action=form&dateRange=weekof&date=${date}&courseAndSection=${req.body.courseId}`,
-      { headers: { Cookie: cipher.decrypt(req.get("Authorization")) } }
+      {
+        headers: {
+          Cookie: cipher.decrypt(req.get("Authorization")),
+        },
+        httpsAgent: new https.Agent({ rejectUnauthorized: false }),
+      }
     );
 
     const $ = cheerio.load(response.data);
