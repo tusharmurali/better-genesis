@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9068e3e-7f28-4a60-9475-0f3df78d03ff" name="Default Changelist" comment="Frontend services">
-      <change beforePath="$PROJECT_DIR$/client" beforeDir="false" afterPath="$PROJECT_DIR$/client" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Assignments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Assignments.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Calendar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Calendar.vue" afterDir="false" />
@@ -110,7 +112,8 @@
       <workItem from="1610939174874" duration="5619000" />
       <workItem from="1611106507822" duration="19909000" />
       <workItem from="1611289894421" duration="1665000" />
-      <workItem from="1611809169291" duration="2444000" />
+      <workItem from="1611809169291" duration="2714000" />
+      <workItem from="1611813158620" duration="193000" />
     </task>
     <task id="LOCAL-00001" summary="Navigation guards">
       <created>1605981000608</created>

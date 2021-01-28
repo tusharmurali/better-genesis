@@ -4,7 +4,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const aes256 = require("aes256");
 
-const cipher = aes256.createCipher("Ankita's birthday");
+const cipher = aes256.createCipher("wow very secret");
 const router = express.Router();
 
 router.post("/login", async (req, res) => {
