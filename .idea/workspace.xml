@@ -32,6 +32,8 @@
       <change beforePath="$PROJECT_DIR$/client/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/genesis.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/genesis.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +111,8 @@
       <workItem from="1609196371429" duration="6475000" />
       <workItem from="1610939174874" duration="5619000" />
       <workItem from="1611106507822" duration="19909000" />
-      <workItem from="1611289894421" duration="616000" />
+      <workItem from="1611289894421" duration="1665000" />
+      <workItem from="1611809169291" duration="2337000" />
     </task>
     <task id="LOCAL-00001" summary="Navigation guards">
       <created>1605981000608</created>

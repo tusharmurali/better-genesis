@@ -3,9 +3,8 @@ const querystring = require("querystring");
 const axios = require("axios");
 const cheerio = require("cheerio");
 const aes256 = require("aes256");
-const https = require("https");
 
-const cipher = aes256.createCipher("Ankita's birthday");
+const cipher = aes256.createCipher("wow very secret");
 const router = express.Router();
 
 router.post("/login", async (req, res) => {
@@ -209,7 +208,6 @@ router.post("/weekly", async (req, res) => {
         headers: {
           Cookie: cipher.decrypt(req.get("Authorization")),
         },
-        httpsAgent: new https.Agent({ rejectUnauthorized: false }),
       }
     );
 

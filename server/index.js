@@ -11,6 +11,11 @@ const genesis = require("./routes/api/genesis");
 app.use("/api/genesis", genesis);
 
 if (process.env.NODE_ENV === "production") {
+  app.use((req, res, next) => {
+    if (req.header("x-forwarded-proto") !== "https")
+      res.redirect(`https://${req.header("host")}${req.url}`);
+    else next();
+  });
   app.use(express.static(__dirname + "/public/"));
   app.get(/.*/, (req, res) => res.sendFile(__dirname + "/public/index.html"));
 }
