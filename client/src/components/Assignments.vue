@@ -12,7 +12,6 @@
           ></v-progress-circular>
         </v-card-subtitle>
         <v-data-table
-          v-if="name"
           :headers="headers"
           :items="assignments"
           disable-pagination
@@ -57,9 +56,9 @@
               size="50"
           ></v-progress-circular>
         </v-overlay>
-        <v-list-item v-if="gradeHistory.length > 0">
+        <v-list-item v-if="typeof grade !== 'undefined'">
           <v-list-item-content>
-            <v-list-item-title v-if="grade" class="text-h3 font-weight-black">
+            <v-list-item-title class="text-h3 font-weight-black">
               {{ grade.toFixed(1) }}%
               <v-chip class="font-weight-regular" :color="trend >= 0 ? 'success' : 'red'" text-color="white">{{ trend >= 0 ? "+" + trend.toFixed(2) : trend.toFixed(2) }}</v-chip>
             </v-list-item-title>
@@ -67,7 +66,7 @@
         </v-list-item>
         <v-list-item v-else>
           <v-list-item-content>
-            <v-list-item-title class="text-h3 font-weight-black"> </v-list-item-title>
+            <v-list-item-title class="text-h3 font-weight-black"/>
           </v-list-item-content>
         </v-list-item>
         <v-sparkline :value="gradeHistory" :gradient="['#1feaea', '#ffd200', '#f72047']" :smooth="10" :padding="16" :line-width="2" auto-draw/>
@@ -84,15 +83,7 @@
             item-text="name"
             @input="points = Math.round(percentage * maxPoints / 10) / 10"
             return-object
-          >
-            <template v-slot:no-data>
-              <v-list-item>
-                <v-list-item-content>
-                  <v-list-item-title>No ungraded assignments</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </template>
-          </v-select>
+          />
           <v-slider
               v-if="assignment"
               v-model="percentage"
@@ -178,6 +169,9 @@ export default {
     "$store.state.studentId"() {
       this.$router.push("/gradebook");
     },
+    async "$store.state.markingPeriod"(markingPeriod) {
+      await this.getAssignments(this.$store.state.studentId, this.courseId, markingPeriod);
+    }
   },
   computed: {
     isCategoricallyWeighted() {
@@ -187,7 +181,7 @@ export default {
       return this.gradeHistory[this.gradeHistory.length - 1];
     },
     trend() {
-      return (this.gradeHistory[this.gradeHistory.length - 1] - this.gradeHistory[this.gradeHistory.length - 2]);
+      return this.gradeHistory.length > 1 ? (this.gradeHistory[this.gradeHistory.length - 1] - this.gradeHistory[this.gradeHistory.length - 2]) : 0;
     },
     ungradedAssignments() {
       return this.assignments.filter(assignment => assignment.grade.includes('Not Graded'));
@@ -206,19 +200,29 @@ export default {
     }
   },
   async created() {
-    this.overlay = true;
-    [this.name, this.assignments] = await GenesisService.getAssignments(this.$store.state.studentId, this.courseId);
-    this.overlay = false;
-    this.gradeOverlay = true;
-    [this.lastUpdated, this.categories] = await GenesisService.getSummary(this.$store.state.studentId, this.courseId);
-    this.gradeHistory = this.getGradeHistory();
-    if (this.ungradedAssignments.length > 0) {
-      this.assignment = this.ungradedAssignments[0];
-      this.points = this.percentage * this.maxPoints / 100;
-    }
-    this.gradeOverlay = false;
+    await this.getAssignments(this.$store.state.studentId, this.courseId, this.$store.state.markingPeriod);
   },
   methods: {
+    async getAssignments(studentId, courseId, markingPeriod) {
+      try {
+        this.overlay = true;
+        [this.name, this.assignments] = await GenesisService.getAssignments(studentId, courseId, markingPeriod);
+        if (this.ungradedAssignments.length > 0) {
+          this.assignment = this.ungradedAssignments[0];
+          this.points = this.percentage * this.maxPoints / 100;
+        } else {
+          this.assignment = null;
+          this.points = 0;
+        }
+        this.overlay = false;
+        this.gradeOverlay = true;
+        [this.lastUpdated, this.categories] = await GenesisService.getSummary(studentId, courseId, markingPeriod);
+        this.gradeHistory = this.getGradeHistory();
+        this.gradeOverlay = false;
+      } catch (error) {
+        console.log(error);
+      }
+    },
     getGrade(points, total, assignmentCategory) {
       if (this.isCategoricallyWeighted) {
         let grade = 0;
@@ -266,7 +270,8 @@ export default {
           }
         }
       }
-      return history;
+      if (history.length > 0) return history;
+      return [0];
     }
   }
 }

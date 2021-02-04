@@ -87,12 +87,16 @@ export default {
       },
       assignments: [],
       colors: ["red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange", "deep-orange", "brown", "blue-grey", "grey"],
+      colorCodes: {},
       overlay: false,
     }
   },
   watch: {
     async "$store.state.studentId"(studentId) {
-      await this.getCalendar(studentId);
+      await this.getCalendar(studentId, this.$store.state.markingPeriod);
+    },
+    async "$store.state.markingPeriod"(markingPeriod) {
+      await this.getCalendar(this.$store.state.studentId, markingPeriod);
     }
   },
   computed: {
@@ -110,25 +114,27 @@ export default {
         return {
           name: assignment.name,
           course: assignment.course,
-          courseId: assignment.courseId,
           start: date,
-          color: this.colors[assignment.index],
+          color: this.colorCodes[assignment.course],
         }
       })
     }
   },
   async created() {
-    if (this.$store.state.studentId) await this.getCalendar(this.$store.state.studentId);
+    if (this.$store.state.studentId && this.$store.state.markingPeriod) await this.getCalendar(this.$store.state.studentId, this.$store.state.markingPeriod);
   },
   methods: {
-    async getCalendar(studentId) {
+    async getCalendar(studentId, markingPeriod) {
       try {
         this.overlay = true;
-        this.gradebook = await GenesisService.getGradebook(studentId);
-        for (let i = 0; i < this.gradebook.length; i++)
-          this.assignments = this.assignments.concat((await GenesisService.getAssignments(studentId, this.gradebook[i].id))[1].map(assignment => ({ index: i, courseId: this.gradebook[i].id, course: this.gradebook[i].name, ...assignment})));
+        let t0 = performance.now();
+        this.assignments = (await GenesisService.getAssignments(studentId, "", markingPeriod))[1];
+        this.assignments.map(assignment => assignment.course).filter((course, i, courses) => courses.indexOf(course) === i).forEach((course, index) => {
+          this.colorCodes[course] = this.colors[index];
+        })
+        let t1 = performance.now();
+        console.log(t1-t0);
         this.overlay = false;
-        if (this.gradebook.length === 0) this.assignments = [];
       } catch (error) {
         console.log(error);
       }

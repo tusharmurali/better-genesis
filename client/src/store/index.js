@@ -9,6 +9,7 @@ export default new Vuex.Store({
     token: "",
     students: [],
     studentId: "",
+    markingPeriod: "",
     credits: [],
   },
   getters: {
@@ -24,6 +25,9 @@ export default new Vuex.Store({
     setStudentId(state, studentId) {
       state.studentId = studentId;
     },
+    setMarkingPeriod(state, markingPeriod) {
+      state.markingPeriod = markingPeriod;
+    },
     setCredits(state, credits) {
       state.credits = credits;
     },
@@ -31,6 +35,7 @@ export default new Vuex.Store({
       state.token = "";
       state.students = [];
       state.studentId = "";
+      state.markingPeriod = "";
       state.credits = [];
     },
   },

@@ -34,9 +34,9 @@ class GenesisService {
   static getStudents() {
     return axios.get("students").then((response) => response.data);
   }
-  static getGradebook(studentId) {
+  static getGradebook(studentId, markingPeriod) {
     return axios
-      .post("gradebook", { studentId })
+      .post("gradebook", { studentId, markingPeriod })
       .then((response) => response.data);
   }
   static getCredits(studentId) {
@@ -44,14 +44,14 @@ class GenesisService {
       .post("credits", { studentId })
       .then((response) => response.data);
   }
-  static getAssignments(studentId, courseId) {
+  static getAssignments(studentId, courseId, markingPeriod) {
     return axios
-      .post("assignments", { studentId, courseId })
+      .post("assignments", { studentId, courseId, markingPeriod })
       .then((response) => response.data);
   }
-  static getSummary(studentId, courseId) {
+  static getSummary(studentId, courseId, markingPeriod) {
     return axios
-      .post("summary", { studentId, courseId })
+      .post("summary", { studentId, courseId, markingPeriod })
       .then((response) => response.data);
   }
   static getWeekly(studentId, courseId) {

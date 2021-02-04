@@ -7,9 +7,10 @@
             <v-list-item-title class="white--text">{{ course.name }}</v-list-item-title>
             <v-list-item-subtitle class="white--text">{{ course.teacher }}</v-list-item-subtitle>
           </v-list-item-content>
-          <v-list-item-action class="text-h6 font-weight-black white--text">
-            {{ graded ? course.grade : "-" }}
+          <v-list-item-action v-if="graded" class="text-h6 font-weight-black white--text">
+            {{ !course.grade.endsWith("%") ? course.grade + "%" : course.grade }}
           </v-list-item-action>
+          <v-list-item-action v-else class="text-h6 font-weight-black white--text">-</v-list-item-action>
         </v-list-item>
       </v-card-title>
     </v-sheet>
@@ -41,11 +42,18 @@ export default {
     return {
       weekly: [],
       colors: ["red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange", "deep-orange", "brown", "blue-grey", "grey"],
-      graded: !this.course.grade.includes('Not Graded'),
       overlay: false,
     }
   },
+  watch: {
+    async "$store.state.markingPeriod"(markingPeriod) {
+      await this.getWeekly(this.$store.state.studentId, this.course.id, markingPeriod);
+    }
+  },
   computed: {
+    graded() {
+      return !this.course.grade.includes('Not Graded');
+    },
     weeklyAssignments() {
       const today = new Date();
       const newYear = today.getMonth() + 1 <= 6;
@@ -63,13 +71,21 @@ export default {
     }
   },
   async created() {
-    try {
-      this.overlay = true;
-      this.weekly = await GenesisService.getWeekly(this.$store.state.studentId, this.course.id);
-      this.overlay = false;
-    } catch (error) {
-      console.log(error);
-    }
+    await this.getWeekly(this.$store.state.studentId, this.course.id, this.$store.state.markingPeriod);
   },
+  methods: {
+    async getWeekly(studentId, markingPeriod) {
+      try {
+        const month = new Date().getMonth() + 1;
+        if (this.$store.state.markingPeriod === (month >= 9 || month === 1 ? "MP1" : "MP2")) {
+          this.overlay = true;
+          this.weekly = await GenesisService.getWeekly(studentId, markingPeriod);
+          this.overlay = false;
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
 }
 </script>

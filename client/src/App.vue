@@ -34,13 +34,9 @@
       </v-btn>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" temporary app>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>
-            <StudentSelect v-if="$store.getters.isLoggedIn"/>
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
+      <v-container>
+        <StudentSelect v-if="$store.getters.isLoggedIn"/>
+      </v-container>
       <v-divider/>
       <v-list nav dense>
         <v-list-item-group active-class="primary--text text--accent-4">
@@ -64,6 +60,11 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
+      <v-container>
+        <v-row justify="center">
+          <MarkingPeriodSelect class="mb-3" v-if="$store.getters.isLoggedIn"/>
+        </v-row>
+      </v-container>
     </v-navigation-drawer>
     <v-main>
       <v-container>
@@ -75,10 +76,11 @@
 
 <script>
 import StudentSelect from "@/components/StudentSelect";
+import MarkingPeriodSelect from "@/components/MarkingPeriodSelect";
 
 export default {
   name: 'App',
-  components: { StudentSelect },
+  components: { MarkingPeriodSelect, StudentSelect },
   data() {
     return {
       drawer: false,

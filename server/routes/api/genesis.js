@@ -53,7 +53,7 @@ router.get("/students", async (req, res) => {
 router.post("/gradebook", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://parents.mtsd.k12.nj.us/genesis/parents?tab1=studentdata&tab2=gradebook&action=form&studentid=${req.body.studentId}`,
+      `https://parents.mtsd.k12.nj.us/genesis/parents?tab1=studentdata&tab2=gradebook&tab3=weeklysummary&studentid=${req.body.studentId}&action=form&mpToView=${req.body.markingPeriod}`,
       { headers: { Cookie: cipher.decrypt(req.get("Authorization")) } }
     );
     const $ = cheerio.load(response.data);
@@ -101,21 +101,16 @@ router.post("/credits", async (req, res) => {
 router.post("/assignments", async (req, res) => {
   try {
     const today = new Date();
-    const month = today.getMonth() + 1;
-
-    let dateRange = "allMP";
-    if (month >= 9 || month === 1) dateRange = "MP1";
-    if (month >= 2 && month <= 6) dateRange = "MP2";
 
     const date =
-      month.toString().padStart(2, "0") +
+      (today.getMonth() + 1).toString().padStart(2, "0") +
       "/" +
       today.getDate().toString().padStart(2, "0") +
       "/" +
       today.getFullYear();
 
     const response = await axios.get(
-      `https://parents.mtsd.k12.nj.us/genesis/parents?tab1=studentdata&tab2=gradebook&tab3=listassignments&studentid=${req.body.studentId}&action=form&dateRange=${dateRange}&date=${date}&courseAndSection=${req.body.courseId}`,
+      `https://parents.mtsd.k12.nj.us/genesis/parents?tab1=studentdata&tab2=gradebook&tab3=listassignments&studentid=${req.body.studentId}&action=form&dateRange=${req.body.markingPeriod}&date=${date}&courseAndSection=${req.body.courseId}`,
       { headers: { Cookie: cipher.decrypt(req.get("Authorization")) } }
     );
 
@@ -140,7 +135,8 @@ router.post("/assignments", async (req, res) => {
         if (cells.length === 0) return;
         return {
           id,
-          name: cells.eq(3).children().eq(0).text(),
+          name: descriptionCell.eq(0).text(),
+          course: cells.eq(1).children().eq(0).text(),
           description:
             descriptionCell.length > 2 ? descriptionCell.eq(1).text() : "",
           due: dueCell.eq(0).text() + " " + dueCell.eq(1).text(),
@@ -162,7 +158,7 @@ router.post("/summary", async (req, res) => {
     const [course, section] = req.body.courseId.split(":");
 
     const response = await axios.get(
-      `https://parents.mtsd.k12.nj.us/genesis/parents?tab1=studentdata&tab2=gradebook&tab3=coursesummary&action=form&studentid=${req.body.studentId}&courseCode=${course}&courseSection=${section}`,
+      `https://parents.mtsd.k12.nj.us/genesis/parents?tab1=studentdata&tab2=gradebook&tab3=coursesummary&action=form&studentid=${req.body.studentId}&courseCode=${course}&courseSection=${section}&mp=${req.body.markingPeriod}`,
       { headers: { Cookie: cipher.decrypt(req.get("Authorization")) } }
     );
 

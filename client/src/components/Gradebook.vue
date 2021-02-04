@@ -26,18 +26,21 @@ export default {
     }
   },
   watch: {
-    async '$store.state.studentId'(studentId) {
-      await this.getGradebook(studentId);
+    async "$store.state.studentId"(studentId) {
+      await this.getGradebook(studentId, this.$store.state.markingPeriod);
+    },
+    async "$store.state.markingPeriod"(markingPeriod) {
+      await this.getGradebook(this.$store.state.studentId, markingPeriod);
     }
   },
   async created() {
-    if (this.$store.state.studentId) await this.getGradebook(this.$store.state.studentId);
+    if (this.$store.state.studentId && this.$store.state.markingPeriod) await this.getGradebook(this.$store.state.studentId, this.$store.state.markingPeriod);
   },
   methods: {
-    async getGradebook(studentId) {
+    async getGradebook(studentId, markingPeriod) {
       try {
         this.overlay = true;
-        this.gradebook = await GenesisService.getGradebook(studentId);
+        this.gradebook = await GenesisService.getGradebook(studentId, markingPeriod);
         this.overlay = false;
       } catch (error) {
         console.log(error);
